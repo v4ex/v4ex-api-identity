@@ -3,11 +3,11 @@
 // Purpose: Add "email" field to Identity.
 
 
-module.exports = ( Identity ) => {
+module.exports = (Identity) => {
 
   const IdentitySchema = Identity.schema
   
   IdentitySchema.plugin(schema => {
-    schema.path('email', { type: String, unique: true })
+    schema.path('email', { type: String, unique: true, sparse: true })
   })
 }

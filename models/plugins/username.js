@@ -3,11 +3,11 @@
 // Purpose: Add "username" field to Identity.
 
 
-module.exports = ( Identity ) => {
+module.exports = (Identity) => {
 
   const IdentitySchema = Identity.schema
   
   IdentitySchema.plugin(schema => {
-    schema.path('username', { type: String, unique: true })
+    schema.path('username', { type: String, unique: true, sparse: true })
   })
 }

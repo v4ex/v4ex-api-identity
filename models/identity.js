@@ -3,8 +3,8 @@
 // Purpose: Provide Identity, IdentitySchema instances.
 
 
-module.exports = ({ mongoose, modelName }) => {
-  if (mongoose === undefined) mongoose = require('../mongoose')
+module.exports = ({ mongoose, modelName, env }) => {
+  if (mongoose === undefined) mongoose = require('../mongoose')({ env })
   if (modelName === undefined) modelName = 'Identity'
 
   let Identity, IdentitySchema

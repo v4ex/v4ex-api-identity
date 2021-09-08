@@ -3,8 +3,8 @@
 // Purpose: Provide Identity, IdentitySchema instances with email field.
 
 
-module.exports = ({ mongoose, modelName }) => {
-  const { Identity, IdentitySchema } = require('./identity')({ mongoose, modelName })
+module.exports = ({ mongoose, modelName, env }) => {
+  const { Identity, IdentitySchema } = require('./identity')({ mongoose, modelName, env })
 
   require('./plugins/email')(Identity)
 
