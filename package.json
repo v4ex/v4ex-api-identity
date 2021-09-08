@@ -1,0 +1,18 @@
+{
+  "name": "v4ex-api-identity",
+  "version": "1.0.0-alpha",
+  "description": "V4EX API System: Identity microservice.",
+  "repository": "github:v4ex/v4ex-api-identity",
+  "author": "V4EX Inc. <v4ex-api-identity@v4ex.com> (https://v4ex.com/)",
+  "contributors": [
+    "Xuwei Li <v4ex-api-identity@xuwei.li> (https://xuwei.li/)"
+  ],
+  "license": "GPL-3.0",
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "commander": "^8.1.0",
+    "dotenv": "^10.0.0",
+    "mongoose": "^6.0.5",
+    "v4ex-api-core": "github:v4ex/v4ex-api-core"
+  }
+}
