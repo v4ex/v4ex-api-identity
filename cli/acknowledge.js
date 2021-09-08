@@ -16,9 +16,9 @@ module.exports = ({ Identity, mongoose, modelName, env }) => {
 
   const {
     acknowledge,
-    parseAcknowledgeError,
     acknowledgeByUsername,
-    acknowledgeByEmail
+    acknowledgeByEmail,
+    acknowledgeByUsernameAndEmail
   } = require('../lib/acknowledge')({ env })
 
   const { program } = require('commander')
@@ -34,7 +34,14 @@ module.exports = ({ Identity, mongoose, modelName, env }) => {
          .option('--email <email>', 'email for identity')
          .action((options, command) => {
            if (options.username && options.email) {
-             // TODO
+            acknowledgeByUsernameAndEmail(Identity, options.username, options.email, (err, identity) => {
+              if (err) {
+                console.error(chalk.red(err))
+                console.error(err)
+              }
+              console.log(identity)
+              done()
+            })
            } else if (options.username) {
              acknowledgeByUsername(Identity, options.username, (err, identity) => {
                if (err) {
