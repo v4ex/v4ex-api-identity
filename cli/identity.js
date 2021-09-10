@@ -13,7 +13,6 @@ module.exports = ({ Identity, mongoose, modelName, env }) => {
   Identity = Identity || require('../models/identity')({ mongoose, modelName, env }).Identity
 
   const { program } = require('commander')
-  const chalk = require('chalk')
 
   const done = () => {
     Identity.base.connection.close()
