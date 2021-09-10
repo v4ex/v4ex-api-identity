@@ -8,6 +8,7 @@
     "Xuwei Li <v4ex-api-identity@xuwei.li> (https://xuwei.li/)"
   ],
   "license": "GPL-3.0",
+  "main": "index.js",
   "bin": {
     "v4ex-api-identity": "./cli.js"
   },

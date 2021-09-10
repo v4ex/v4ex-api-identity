@@ -10,9 +10,7 @@
  * @param {*} env (optional)
  */
 module.exports = ({ Identity, mongoose, modelName, env }) => {
-  if (Identity === undefined) {
-    Identity = require('../models/all-identity')({ mongoose, modelName }).Identity
-  }
+  Identity = Identity || require('../models/all-identity')({ mongoose, modelName, env }).Identity
 
   const {
     acknowledge,
@@ -60,8 +58,7 @@ module.exports = ({ Identity, mongoose, modelName, env }) => {
                console.log(identity)
                done()
              })
-           } else {
-             console.log(Identity.collection)
+           } else { // No --username and --email
              acknowledge(Identity, (err, identity) => {
                if (err) {
                  console.error(chalk.red(err))

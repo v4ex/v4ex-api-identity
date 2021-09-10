@@ -3,10 +3,14 @@
 // Purpose: Provide CLI command identity to control Identity in database.
 
 
+/**
+ * @param {*} Identity (optional)
+ * @param {*} mongoose (optional)
+ * @param {*} modelName (optional)
+ * @param {*} env (optional)
+ */
 module.exports = ({ Identity, mongoose, modelName, env }) => {
-  if (Identity === undefined) {
-    Identity = require('../models/identity')({ mongoose, modelName }).Identity
-  }
+  Identity = Identity || require('../models/identity')({ mongoose, modelName, env }).Identity
 
   const { program } = require('commander')
   const chalk = require('chalk')

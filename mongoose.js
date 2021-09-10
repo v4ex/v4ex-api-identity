@@ -3,6 +3,10 @@
 // Purpose: Provide mongoose instance.
 
 
+/**
+ * @param {*} env (optional)
+ *   - IDENTITY_MONGO_URI
+ */
 module.exports = ({ env }) => {
   if (env === undefined) {
     require('dotenv').config()
