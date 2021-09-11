@@ -21,7 +21,7 @@ module.exports = ({ Identity, mongoose, modelName, env }) => {
   program.command('identity')
          .description('control Identity model in database')
          .option('--drop', 'Drop Identity model collection in database')
-         .action((options) => {
+         .action(function(options) {
            if (options.drop) {
              Identity.collection.drop(done)
            }

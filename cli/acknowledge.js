@@ -30,7 +30,7 @@ module.exports = ({ Identity, mongoose, modelName, env }) => {
          .description('add new Identity to database')
          .option('--username <username>', 'username for identity')
          .option('--email <email>', 'email for identity')
-         .action((options, command) => {
+         .action(function(options, command) {
            if (options.username && options.email) {
             acknowledgeByUsernameAndEmail(Identity, options.username, options.email, (err, identity) => {
               if (err) {
