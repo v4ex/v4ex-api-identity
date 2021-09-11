@@ -4,8 +4,8 @@
 
 
 module.exports = ({ mongoose, modelName, env }) => {
-  if (mongoose === undefined) mongoose = require('../mongoose')({ env })
-  if (modelName === undefined) modelName = 'Identity'
+  mongoose = mongoose || require('../mongoose')({ env })
+  modelName = modelName || 'Identity'
 
   let Identity, IdentitySchema
 
