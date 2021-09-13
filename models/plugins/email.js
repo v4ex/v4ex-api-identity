@@ -3,6 +3,9 @@
 // Purpose: Add "email" field to Identity.
 
 
+/**
+ * @param {mongoose.Model()} Identity 
+ */
 module.exports = (Identity) => {
 
   const IdentitySchema = Identity.schema

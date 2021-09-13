@@ -4,10 +4,11 @@
 
 
 /**
- * @param {*} Identity (optional)
- * @param {*} mongoose (optional)
- * @param {*} modelName (optional)
- * @param {*} env (optional)
+ * @param {Object} {}
+ *   - @param {mongoose.Model} Identity (optional)
+ *   - @param {mongoose} mongoose (optional)
+ *   - @param {String} modelName (optional)
+ *   - @param {Object} env (optional)
  */
 module.exports = ({ Identity, mongoose, modelName, env }) => {
   Identity = Identity || require('../models/all-identity')({ mongoose, modelName, env }).Identity

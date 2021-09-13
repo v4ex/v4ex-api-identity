@@ -3,6 +3,12 @@
 // Purpose: Provide Identity, IdentitySchema instances.
 
 
+/**
+ * @param {Object} {}
+ *   - @param {mongoose} mongoose (optional)
+ *   - @param {String} modelName (optional)
+ *   - @param {Object} env (optional)
+ */
 module.exports = ({ mongoose, modelName, env }) => {
   mongoose = mongoose || require('../mongoose')({ env })
   modelName = modelName || 'Identity'

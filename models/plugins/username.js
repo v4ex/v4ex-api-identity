@@ -3,6 +3,9 @@
 // Purpose: Add "username" field to Identity.
 
 
+/**
+ * @param {mongoose.Model()} Identity 
+ */
 module.exports = (Identity) => {
 
   const IdentitySchema = Identity.schema

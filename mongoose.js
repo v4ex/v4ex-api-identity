@@ -4,8 +4,9 @@
 
 
 /**
- * @param {*} env (optional)
- *   - IDENTITY_MONGO_URI
+ * @param {Object} {}
+ *   - @param {Object} env (optional)
+ *       - IDENTITY_MONGO_URI
  */
 module.exports = ({ env }) => {
   if (env === undefined) {
